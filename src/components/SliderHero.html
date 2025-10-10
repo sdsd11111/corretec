@@ -1,0 +1,47 @@
+<div class="hero-slider" id="heroSlider">
+    <div class="hero-slide active" style="background-image: url('/images/hero1.webp');">
+        <div class="hero-content">
+            <h1 class="hero-title">Protege tu Futuro con CORRETEC</h1>
+            <p class="hero-description">Más de 30 años brindando tranquilidad y seguridad a familias y empresas ecuatorianas</p>
+            <button class="cta-button" onclick="openModal()">Agenda una Llamada</button>
+        </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('/images/hero2.webp');">
+        <div class="hero-content">
+            <h1 class="hero-title">Seguros Personalizados</h1>
+            <p class="hero-description">Soluciones integrales adaptadas a tus necesidades específicas</p>
+            <button class="cta-button" onclick="openModal()">Cotizar Ahora</button>
+        </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('/images/hero3.webp');">
+        <div class="hero-content">
+            <h1 class="hero-title">Atención 24/7</h1>
+            <p class="hero-description">Estamos contigo cuando más nos necesitas</p>
+            <button class="cta-button" onclick="openModal()">Contactar Ahora</button>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    initHeroSlider();
+});
+
+function initHeroSlider() {
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+    
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+    
+    // Auto-advance slides every 5 seconds
+    setInterval(nextSlide, 5000);
+}
+</script>

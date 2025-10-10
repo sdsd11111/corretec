@@ -1,0 +1,43 @@
+<div class="carrusel-container" id="testimoniosCarrusel">
+    <div class="carrusel-track" id="testimoniosTrack">
+        <!-- Los testimonios se cargarán dinámicamente desde testimonios.json -->
+    </div>
+    <button class="carrusel-btn carrusel-prev" onclick="moveCarrusel('testimonios', -1)">‹</button>
+    <button class="carrusel-btn carrusel-next" onclick="moveCarrusel('testimonios', 1)">›</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    loadTestimonios();
+});
+
+async function loadTestimonios() {
+    try {
+        const response = await fetch('/src/data/testimonios.json');
+        const testimonios = await response.json();
+        const track = document.getElementById('testimoniosTrack');
+        
+        track.innerHTML = testimonios.map(testimonio => `
+            <div class="carrusel-item">
+                <div class="testimonio-card">
+                    ${testimonio.video ? 
+                        `<video width="100%" height="200" controls>
+                            <source src="${testimonio.video}" type="video/mp4">
+                            Tu navegador no soporta video HTML5.
+                        </video>` :
+                        `<img src="${testimonio.imagen}" alt="${testimonio.nombre}" class="testimonio-avatar">`
+                    }
+                    <div class="testimonio-stars">★★★★★</div>
+                    <p>"${testimonio.comentario}"</p>
+                    <h4>${testimonio.nombre}</h4>
+                    <p><small>${testimonio.empresa}</small></p>
+                </div>
+            </div>
+        `).join('');
+        
+        initCarrusel('testimonios');
+    } catch (error) {
+        console.error('Error loading testimonios:', error);
+    }
+}
+</script>

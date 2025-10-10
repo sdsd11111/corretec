@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORRETEC - Asesora Productora de Seguros en Ecuador | Protege tu Futuro</title>
+    <meta name="description" content="CORRETEC Cia. Ltda. es tu asesora productora de seguros de confianza en Ecuador. Ofrecemos seguros de vida, auto, hogar y empresariales con 30+ años de experiencia.">
+    <meta name="keywords" content="seguros Ecuador, seguros de vida, seguros de auto, seguros empresariales, CORRETEC, asesora seguros">
+    <meta name="author" content="CORRETEC Cia. Ltda.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Corretec-Seguros Confiables">
+    <meta property="og:description" content="Bienvenido a Corretec, disfruta nuestro Servicio">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://corretec.ec/">
+    <meta property="og:image" content="https://corretec.ec/Imagen%20destacada.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Corretec">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/public/images/favicon_corretec.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/styles/variables.css">
+    <link rel="stylesheet" href="/src/styles/global.css">
+    
+    <!-- Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CORRETEC Cia. Ltda.",
+        "description": "Asesora Productora de Seguros en Ecuador",
+        "url": "https://www.corretec.com.ec",
+    "logo": "https://www.corretec.com.ec/images/logo.webp",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+593-2-XXXXXXX",
+            "contactType": "customer service",
+            "availableLanguage": "Spanish"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "EC",
+            "addressLocality": "Quito"
+        },
+        "sameAs": [
+            "https://www.facebook.com/corretec",
+            "https://www.linkedin.com/company/corretec"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+    
+    <!-- Hero Slider -->
+    <section id="hero-slider"></section>
+    
+    <!-- Quiénes Somos -->
+    <section id="quienes-somos" class="section">
+        <div class="container">
+            <div class="section-content">
+                <div class="text-content">
+                    <h2 class="section-title">Quiénes Somos</h2>
+                    <p class="section-description">
+                        CORRETEC Cia. Ltda. es una empresa ecuatoriana especializada en asesoría y producción de seguros, 
+                        con más de 30 años de experiencia protegiendo a familias y empresas en todo el país. 
+                        Nuestro compromiso es brindar soluciones integrales de seguros adaptadas a las necesidades específicas de cada cliente.
+                    </p>
+                    <ul class="benefits-list">
+                        <li>✓ Más de 30 años de experiencia en el mercado ecuatoriano</li>
+                        <li>✓ Asesoría personalizada y profesional</li>
+                        <li>✓ Amplia red de aseguradoras aliadas</li>
+                        <li>✓ Atención 24/7 para emergencias</li>
+                        <li>✓ Procesos digitalizados y ágiles</li>
+                    </ul>
+                    <button class="cta-button" onclick="openModal()">Agenda una Llamada</button>
+                </div>
+                <div class="image-content">
+                    <img src="/images/equipo.webp" alt="Equipo profesional de CORRETEC" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Servicios -->
+    <section id="servicios" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Nuestros Servicios</h2>
+            <p class="section-subtitle text-center">Protección integral para todas tus necesidades</p>
+            <div id="servicios-carrusel"></div>
+        </div>
+    </section>
+    
+    <!-- Testimonios -->
+    <section id="testimonios" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Lo que Dicen Nuestros Clientes</h2>
+            <div id="testimonios-carrusel"></div>
+        </div>
+    </section>
+    
+    <!-- Contacto -->
+    <section id="contacto" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Contáctanos</h2>
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <div id="formulario"></div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Ubicación</h3>
+                        <p>Quito, Ecuador</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Teléfono</h3>
+                        <p>+593-2-XXXXXXX</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>info@corretec.com.ec</p>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.799415304123!2d-78.48678908573394!3d-0.18008999982477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107ca3c0c1%3A0x4a9b1b1b1b1b1b1b!2sQuito%2C%20Ecuador!5e0!3m2!1ses!2sec!4v1234567890123!5m2!1ses!2sec"
+                            width="100%" 
+                            height="200" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/593XXXXXXXXX?text=Hola,%20me%20interesa%20información%20sobre%20seguros" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            </svg>
+        </a>
+    </div>
+    
+    <!-- CTA Fixed Button -->
+    <div class="cta-fixed">
+        <button class="cta-button" onclick="openModal()">Agenda una Llamada</button>
+    </div>
+    
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Agenda una Llamada</h3>
+            <div id="modal-formulario"></div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="/src/scripts/slider.js"></script>
+    <script src="/src/scripts/carrusel.js"></script>
+    <script>
+        // Load components
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('header', '/src/components/Header.html');
+            loadComponent('hero-slider', '/src/components/SliderHero.html');
+            loadComponent('servicios-carrusel', '/src/components/CarruselServicios.html');
+            loadComponent('testimonios-carrusel', '/src/components/Testimonios.html');
+            loadComponent('formulario', '/src/components/Formulario.html');
+            loadComponent('modal-formulario', '/src/components/Formulario.html');
+            loadComponent('footer', '/src/components/Footer.html');
+            
+            // Initialize animations
+            initScrollAnimations();
+        });
+        
+        function loadComponent(elementId, componentPath) {
+            fetch(componentPath)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(elementId).innerHTML = html;
+                })
+                .catch(error => console.error('Error loading component:', error));
+        }
+        
+        function openModal() {
+            document.getElementById('modal').style.display = 'block';
+        }
+        
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+        
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.section').forEach(section => {
+                observer.observe(section);
+            });
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

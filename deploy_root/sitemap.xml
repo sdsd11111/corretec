@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Sitemap for https://corretec.ec -->
+  <url>
+    <loc>https://corretec.ec/</loc>
+  </url>
+  <url>
+    <loc>https://corretec.ec/politica-privacidad</loc>
+  </url>
+  <url>
+    <loc>https://corretec.ec/terminos-condiciones</loc>
+  </url>
+  <!-- Services -->
+  <url>
+    <loc>https://corretec.ec/servicios/fianzas</loc>
+  </url>
+  <url>
+    <loc>https://corretec.ec/servicios/vehiculos-livianos-pesados</loc>
+  </url>
+  <url>
+    <loc>https://corretec.ec/servicios/transporte</loc>
+  </url>
+  <url>
+    <loc>https://corretec.ec/servicios/fidelidad</loc>
+  </url>
+  <url>
+    <loc>https://corretec.ec/servicios/responsabilidad-civil</loc>
+  </url>
+  <url>
+    <loc>https://corretec.ec/servicios/vida-accidentes</loc>
+  </url>
+  <url>
+    <loc>https://corretec.ec/servicios/incendio</loc>
+  </url>
+  <url>
+    <loc>https://corretec.ec/servicios/equipo-maquinaria</loc>
+  </url>
+  <url>
+    <loc>https://corretec.ec/servicios/viajes</loc>
+  </url>
+</urlset>

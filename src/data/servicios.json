@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "titulo": "Seguros de Vida",
+    "descripcion": "Protege el futuro de tu familia con nuestros seguros de vida personalizados. Cobertura integral y beneficios adicionales.",
+    "icono": "/public/images/servicio1.webp",
+    "beneficios": [
+      "Cobertura por muerte natural y accidental",
+      "Beneficios por invalidez total y permanente",
+      "Opciones de ahorro e inversión",
+      "Primas competitivas"
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Seguros de Auto",
+    "descripcion": "Conduce con tranquilidad. Cobertura completa para tu vehículo con asistencia 24/7 y talleres autorizados.",
+    "icono": "/public/images/servicio2.webp",
+    "beneficios": [
+      "Cobertura contra todo riesgo",
+      "Asistencia vial 24/7",
+      "Red de talleres autorizados",
+      "Vehículo de reemplazo"
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "Seguros de Hogar",
+    "descripcion": "Tu hogar es tu refugio. Protégelo contra incendios, robos, terremotos y otros riesgos con nuestras pólizas integrales.",
+    "icono": "/public/images/servicio3.webp",
+    "beneficios": [
+      "Cobertura contra incendio y terremoto",
+      "Protección contra robo",
+      "Responsabilidad civil",
+      "Gastos de alojamiento temporal"
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "Seguros Empresariales",
+    "descripción": "Soluciones integrales para proteger tu negocio. Desde PYMES hasta grandes corporaciones, tenemos la cobertura ideal.",
+    "icono": "/public/images/servicio4.webp",
+    "beneficios": [
+      "Seguro de responsabilidad civil",
+      "Cobertura de equipos y maquinaria",
+      "Seguro de transporte de mercancías",
+      "Pólizas de fidelidad"
+    ]
+  }
+]

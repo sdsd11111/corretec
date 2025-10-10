@@ -1,0 +1,112 @@
+<form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
+    <div class="form-group">
+        <label for="nombre" class="form-label">Nombre Completo *</label>
+        <input type="text" id="nombre" name="nombre" class="form-input" required>
+        <div class="form-error" id="nombreError"></div>
+    </div>
+    
+    <div class="form-group">
+        <label for="email" class="form-label">Correo Electrónico *</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+        <div class="form-error" id="emailError"></div>
+    </div>
+    
+    <div class="form-group">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" class="form-input">
+    </div>
+    
+    <div class="form-group">
+        <label for="tipoSeguro" class="form-label">Tipo de Seguro *</label>
+        <select id="tipoSeguro" name="tipoSeguro" class="form-select" required>
+            <option value="">Selecciona un tipo de seguro</option>
+            <option value="vida">Seguro de Vida</option>
+            <option value="auto">Seguro de Auto</option>
+            <option value="hogar">Seguro de Hogar</option>
+            <option value="empresarial">Seguro Empresarial</option>
+            <option value="salud">Seguro de Salud</option>
+            <option value="otro">Otro</option>
+        </select>
+        <div class="form-error" id="tipoSeguroError"></div>
+    </div>
+    
+    <div class="form-group">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" class="form-textarea" rows="4" placeholder="Cuéntanos más sobre tus necesidades..."></textarea>
+    </div>
+    
+    <button type="submit" class="cta-button">Enviar Consulta</button>
+</form>
+
+<script>
+function submitForm(event) {
+    event.preventDefault();
+    
+    // Clear previous errors
+    document.querySelectorAll('.form-error').forEach(error => error.textContent = '');
+    
+    // Get form data
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    
+    // Validate form
+    let isValid = true;
+    
+    if (!data.nombre.trim()) {
+        document.getElementById('nombreError').textContent = 'El nombre es requerido';
+        isValid = false;
+    }
+    
+    if (!data.email.trim()) {
+        document.getElementById('emailError').textContent = 'El email es requerido';
+        isValid = false;
+    } else if (!isValidEmail(data.email)) {
+        document.getElementById('emailError').textContent = 'Ingresa un email válido';
+        isValid = false;
+    }
+    
+    if (!data.tipoSeguro) {
+        document.getElementById('tipoSeguroError').textContent = 'Selecciona un tipo de seguro';
+        isValid = false;
+    }
+    
+    if (isValid) {
+        // Here you would normally send the data to your server
+        alert('¡Gracias por tu consulta! Nos pondremos en contacto contigo pronto.');
+        event.target.reset();
+        closeModal();
+    }
+}
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Real-time validation
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = document.querySelectorAll('.form-input, .form-select');
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            validateField(this);
+        });
+    });
+});
+
+function validateField(field) {
+    const errorElement = document.getElementById(field.name + 'Error');
+    if (!errorElement) return;
+    
+    errorElement.textContent = '';
+    
+    if (field.hasAttribute('required') && !field.value.trim()) {
+        errorElement.textContent = 'Este campo es requerido';
+        return;
+    }
+    
+    if (field.type === 'email' && field.value && !isValidEmail(field.value)) {
+        errorElement.textContent = 'Ingresa un email válido';
+        return;
+    }
+}
+</script>

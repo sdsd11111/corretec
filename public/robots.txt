@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://corretec.ec/sitemap.xml

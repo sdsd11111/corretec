@@ -1,0 +1,85 @@
+{
+  "servicios": [
+    {
+      "id": "fianzas",
+      "titulo": "Fianzas",
+      "subtitulo": "Buen Uso de Anticipo y Cumplimiento de Contrato, Ramos Generales",
+      "descripcion": "Garantizamos el cumplimiento de tus contratos y el buen uso de anticipos con nuestras fianzas especializadas.",
+      "icono": "shield-check",
+    "imagen": "/images/fianzas.webp",
+      "slug": "fianzas"
+    },
+    {
+      "id": "vehiculos-livianos-pesados",
+      "titulo": "Seguros de Vehículos",
+      "subtitulo": "Livianos y Pesados",
+      "descripcion": "Protección integral para tu vehículo, desde autos familiares hasta camiones de carga pesada.",
+      "icono": "truck",
+    "imagen": "/images/vehiculos.webp",
+      "slug": "vehiculos-livianos-pesados"
+    },
+    {
+      "id": "transporte",
+      "titulo": "Seguros de Transporte",
+      "subtitulo": "Carga y Mercancías",
+      "descripcion": "Asegura tus mercancías durante el transporte terrestre, marítimo y aéreo.",
+      "icono": "truck-loading",
+    "imagen": "/images/transporte.webp",
+      "slug": "transporte"
+    },
+    {
+      "id": "fidelidad",
+      "titulo": "Fidelidad",
+      "subtitulo": "Pública y Privada",
+      "descripcion": "Protege tu empresa contra actos deshonestos de empleados en el sector público y privado.",
+      "icono": "user-shield",
+    "imagen": "/images/fidelidad.webp",
+      "slug": "fidelidad"
+    },
+    {
+      "id": "responsabilidad-civil",
+      "titulo": "Responsabilidad Civil",
+      "subtitulo": "Protección Integral",
+      "descripcion": "Cobertura ante daños a terceros por actividades profesionales o empresariales.",
+      "icono": "balance-scale",
+    "imagen": "/images/responsabilidad.webp",
+      "slug": "responsabilidad-civil"
+    },
+    {
+      "id": "vida-accidentes",
+      "titulo": "Vida Individual y Colectiva",
+      "subtitulo": "Accidentes Personales",
+      "descripcion": "Protección para ti y tu familia ante cualquier eventualidad o accidente personal.",
+      "icono": "heart",
+    "imagen": "/images/vida.webp",
+      "slug": "vida-accidentes"
+    },
+    {
+      "id": "incendio",
+      "titulo": "Seguros de Incendio",
+      "subtitulo": "Protección Patrimonial",
+      "descripcion": "Protege tu patrimonio contra incendios, explosiones y riesgos relacionados.",
+      "icono": "fire",
+    "imagen": "/images/incendio.webp",
+      "slug": "incendio"
+    },
+    {
+      "id": "equipo-maquinaria",
+      "titulo": "Equipo y Maquinaria",
+      "subtitulo": "Protección Industrial",
+      "descripcion": "Cobertura especializada para equipos industriales, maquinaria y herramientas de trabajo.",
+      "icono": "cog",
+    "imagen": "/images/maquinaria.webp",
+      "slug": "equipo-maquinaria"
+    },
+    {
+      "id": "viajes",
+      "titulo": "Seguros de Viajes",
+      "subtitulo": "Protección Internacional",
+      "descripcion": "Viaja tranquilo con cobertura médica, cancelación de viajes y asistencia 24/7.",
+      "icono": "plane",
+    "imagen": "/images/viajes.webp",
+      "slug": "viajes"
+    }
+  ]
+}

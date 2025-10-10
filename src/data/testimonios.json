@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "nombre": "María González",
+    "empresa": "Familia González",
+    "comentario": "CORRETEC nos ha acompañado por más de 15 años. Su atención personalizada y rapidez en los siniestros es excepcional. Recomiendo sus servicios sin dudarlo.",
+  "imagen": "/images/testimonio1.webp",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "nombre": "Carlos Mendoza",
+    "empresa": "Constructora Mendoza S.A.",
+    "comentario": "Como empresa constructora, necesitábamos seguros confiables. CORRETEC nos ofreció las mejores opciones del mercado con precios competitivos.",
+  "imagen": "/images/testimonio2.webp",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "nombre": "Ana Rodríguez",
+    "empresa": "Restaurante El Buen Sabor",
+    "comentario": "Cuando tuvimos un incendio en nuestro restaurante, CORRETEC estuvo con nosotros desde el primer momento. Su apoyo fue fundamental para salir adelante.",
+  "video": "/videos/testimonio1.mp4",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "nombre": "Roberto Silva",
+    "empresa": "Familia Silva",
+    "comentario": "El seguro de auto que contraté con CORRETEC me salvó de un gran problema. La asistencia fue inmediata y el proceso de reclamo muy sencillo.",
+  "imagen": "/images/testimonio1.webp",
+    "rating": 5
+  }
+]

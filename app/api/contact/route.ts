@@ -8,8 +8,6 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 };
 
-// Configuración de Edge Function
-export const runtime = 'edge'; // Usar Edge Runtime
 
 // Tipos para las variables de entorno
 type EnvVars = {

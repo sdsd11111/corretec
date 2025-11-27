@@ -61,7 +61,22 @@ export async function POST(request: Request) {
   }
 
   try {
-    const { nombre, email, telefono, tipoSeguro, mensaje } = await request.json();
+    const body = await request.json();
+    const { nombre, email, telefono, tipoSeguro, mensaje } = body;
+
+    // Validar campos requeridos
+    if (!nombre || !email || !telefono || !tipoSeguro || !mensaje) {
+      return new Response(
+        JSON.stringify({ success: false, message: 'Todos los campos son requeridos' }),
+        {
+          status: 400,
+          headers: {
+            'Content-Type': 'application/json',
+            ...corsHeaders
+          }
+        }
+      );
+    }
 
     // Configurar el transporte SMTP con variables de entorno
     const transporter = nodemailer.createTransport({
@@ -122,9 +137,13 @@ export async function POST(request: Request) {
   }
 }
 
-export async function OPTIONS() {
+export async function OPTIONS(request: Request) {
   return new Response(null, {
     status: 204,
-    headers: corsHeaders
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    },
   });
 }

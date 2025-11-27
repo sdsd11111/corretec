@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   trailingSlash: true,
   images: {
-    unoptimized: true, // Necesario para export estático si usas imágenes
+    unoptimized: true,
+  },
+  // Habilita las rutas de la API
+  experimental: {
+    appDir: true,
   },
 };
 

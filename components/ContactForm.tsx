@@ -111,27 +111,39 @@ export default function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // EDITAR AQUÍ: Integrar con servicio de email real (EmailJS, Formspree, etc.)
-      console.log("Datos del formulario:", formData)
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-      // Simular envío
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      const data = await response.json();
 
-      setIsSubmitted(true)
+      if (!response.ok) {
+        throw new Error(data.message || 'Error al enviar el mensaje');
+      }
+
+      // Mostrar mensaje de éxito
+      setIsSubmitted(true);
+      
+      // Resetear el formulario
       setFormData({
         nombre: "",
         email: "",
         telefono: "",
         tipoSeguro: "",
         mensaje: "",
-      })
+      });
 
-      // Reset success message after 5 seconds
-      setTimeout(() => setIsSubmitted(false), 5000)
+      // Ocultar mensaje después de 5 segundos
+      setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error) {
-      console.error("Error al enviar formulario:", error)
+      console.error("Error al enviar formulario:", error);
+      alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   }
 

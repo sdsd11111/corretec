@@ -1,7 +1,12 @@
 "use client"
 import { useState, useEffect } from "react"
 
-export default function WhatsAppButton() {
+interface WhatsAppButtonProps {
+  phoneNumber?: string;
+  message?: string;
+}
+
+export default function WhatsAppButton({ phoneNumber = "593993057480", message = "¡Hola! Me interesa conocer más sobre los seguros de CORRETEC. ¿Podrían brindarme información?" }: WhatsAppButtonProps) {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -13,11 +18,8 @@ export default function WhatsAppButton() {
   }, [])
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent(
-      "¡Hola! Me interesa conocer más sobre los seguros de CORRETEC. ¿Podrían brindarme información?",
-    )
-    const phoneNumber = "593993057480"
-    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank")
+    const encodedMessage = encodeURIComponent(message)
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank")
   }
 
   return (

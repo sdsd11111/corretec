@@ -1,7 +1,12 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-export const dynamic = 'force-dynamic'; // Asegura que esta ruta se maneje dinámicamente
+// Configuración CORS
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
 
 // Tipos para las variables de entorno
 type EnvVars = {
@@ -69,12 +74,27 @@ export async function POST(request: Request) {
     // Enviar el correo
     await transporter.sendMail(mailOptions);
 
-    return NextResponse.json({ success: true, message: 'Mensaje enviado correctamente' });
+    return new Response(
+      JSON.stringify({ success: true, message: 'Mensaje enviado correctamente' }),
+      {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+          ...corsHeaders
+        }
+      }
+    );
   } catch (error) {
     console.error('Error al enviar el correo:', error);
-    return NextResponse.json(
-      { success: false, message: 'Error al enviar el mensaje' },
-      { status: 500 }
+    return new Response(
+      JSON.stringify({ success: false, message: 'Error al enviar el mensaje' }),
+      {
+        status: 500,
+        headers: {
+          'Content-Type': 'application/json',
+          ...corsHeaders
+        }
+      }
     );
   }
 }
@@ -82,10 +102,6 @@ export async function POST(request: Request) {
 export async function OPTIONS() {
   return new Response(null, {
     status: 204,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-    },
+    headers: corsHeaders
   });
 }

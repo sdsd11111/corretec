@@ -8,6 +8,9 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 };
 
+// Configuración de Edge Function
+export const runtime = 'edge'; // Usar Edge Runtime
+
 // Tipos para las variables de entorno
 type EnvVars = {
   SMTP_HOST: string;
@@ -37,6 +40,28 @@ if (missingVars.length > 0) {
 }
 
 export async function POST(request: Request) {
+  // Manejar solicitud OPTIONS para CORS
+  if (request.method === 'OPTIONS') {
+    return new Response(null, {
+      status: 204,
+      headers: corsHeaders
+    });
+  }
+
+  // Solo permitir método POST
+  if (request.method !== 'POST') {
+    return new Response(
+      JSON.stringify({ success: false, message: 'Método no permitido' }),
+      {
+        status: 405,
+        headers: {
+          'Content-Type': 'application/json',
+          ...corsHeaders
+        }
+      }
+    );
+  }
+
   try {
     const { nombre, email, telefono, tipoSeguro, mensaje } = await request.json();
 
